@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#experiencias">Experiencias</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <div class="hero-profile-image">
+                <div class="profile-photo">
+                    <img src="foto-perfil.jpeg" alt="Foto de Juan Souza">
+                </div>
+            </div>
+            <h1>Hola, soy Juan Souza</h1>
+            <p>Full Stack Developer | Web & Mobile</p>
+            <p class="hero-subtitle">Desarrollador web y mobile con orientación al detalle y pasión por crear experiencias digitales excepcionales</p>
+            <div class="hero-buttons">
+                <a href="cvjuansouza.pdf" download class="hero-btn">
+                    <i class="fas fa-download"></i> Descargar CV
+                </a>
+                <a href="https://github.com/juanisouza" target="_blank" class="hero-btn hero-btn-secondary">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/juan-ignacio-souza-4736a51b0" target="_blank" class="hero-btn hero-btn-secondary">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi">
+        <h2 class="section-title">Sobre Mí</h2>
+        <div class="about-content">
+            <div class="about-text-full">
+                <h3>¡Encantado de conocerte!</h3>
+                <p>Tengo 23 años y soy un desarrollador web y mobile con orientación al detalle, capacidad de adaptación y gran interés por el aprendizaje continuo.</p>
+                <p>A lo largo de mi trayectoria, he adquirido conocimientos en HTML, CSS, JavaScript, Tailwind y frameworks como React y React Native con Expo. Para servidor y backend utilizo Node.js. Con todas estas tecnologías he llevado a cabo proyectos completos desde el diseño hasta su implementación. Esto incluye 2 páginas de minijuegos en internet y 2 juegos mobile.</p>
+                <p>Me considero una persona organizada, proactiva, responsable y con buenas habilidades interpersonales. Busco formar parte de un equipo donde pueda aplicar mis conocimientos en desarrollo full stack y siempre estoy en búsqueda de nuevas oportunidades para crecer profesional y personalmente.</p>
+                <p>Me encanta aprender, compartir conocimiento y asumir retos que me permitan seguir evolucionando como profesional en tecnología.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Proyectos -->
+    <section id="proyectos">
+        <h2 class="section-title">Proyectos</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="typerush.png" alt="">
+                </div>
+                <div class="project-content">
+                    <h3>TypeRush</h3>
+                    <p>Juego móvil multiplataforma para mejorar velocidad y precisión de escritura. Sistema de combos de 10 niveles, dificultad adaptativa, multiidioma (ES/EN/PT) y monetización con AdMob. Incluye tracking de WPM, precisión y sistema de récords.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">i18n</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=tu.app" target="_blank" class="project-btn">
+                            <i class="fas fa-external-link-alt"></i> Play Store
+                        </a>
+                        <a href="https://github.com/tu-usuario/typerush" target="_blank" class="project-btn project-btn-secondary">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="lolchallenge.png" alt="">
+                </div>
+                <div class="project-content">
+                    <h3>LoL Challenge</h3>
+                    <p>Plataforma web de 9 mini-juegos interactivos de League of Legends con audiencia global. Sistema de autenticación, rankings globales, progresión con divisiones, multilenguaje (ES/EN) y analytics. Optimizado para móvil, tablet y desktop.</p>
+                    <div class="project-tags">
+                        <span class="tag">React</span>
+                        <span class="tag">Firebase</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">i18next</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://lolchallenge.net" target="_blank" class="project-btn">
+                            <i class="fas fa-external-link-alt"></i> Ver Sitio
+                        </a>
+                        <a href="https://github.com/tu-usuario/lolchallenge" target="_blank" class="project-btn project-btn-secondary">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-image">
+                    <i class="fas fa-palette"></i>
+                </div>
+                <div class="project-content">
+                    <h3>Color Fusion</h3>
+                    <p>Juego de puzzle móvil con mecánicas innovadoras y diseño UI responsivo. Sistema de puntuación avanzado, efectos visuales y experiencia de usuario optimizada para dispositivos móviles.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">Mobile</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://play.google.com/store" target="_blank" class="project-btn">
+                            <i class="fas fa-external-link-alt"></i> Ver Proyecto
+                        </a>
+                        <a href="https://github.com/tu-usuario/color-fusion" target="_blank" class="project-btn project-btn-secondary">
+                            <i class="fab fa-github"></i> Código
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experiencias -->
+    <section id="experiencias">
+        <h2 class="section-title">Experiencias</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Full Stack Developer | Creator</h3>
+                    <span class="company">Jings Studio - TypeRush</span>
+                    <span class="date"><i class="far fa-calendar"></i> Agosto 2025 - Actualidad</span>
+                    <p>Desarrollo de TypeRush, juego móvil multiplataforma con sistema de combos de 10 niveles, motor de dificultad adaptativa, base de datos con más de 100 frases categorizadas y sistema multiidioma (ES/EN/PT). Implementación de monetización no intrusiva con AdMob, tracking de métricas (WPM, precisión, récords) y efectos visuales avanzados. Stack: React Native, TypeScript, Expo Router, AdMob SDK, i18n-js.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Full Stack Developer | Creator</h3>
+                    <span class="company">LoL Challenge</span>
+                    <span class="date"><i class="far fa-calendar"></i> Enero 2025 - Actualidad</span>
+                    <p>Desarrollo full stack de plataforma web con 9 mini-juegos interactivos de League of Legends. Implementación de sistema de autenticación con Firebase Auth, rankings globales con Firestore, sistema de progresión con divisiones, arquitectura multilenguaje y optimización SEO. Integración de Google Analytics 4 y diseño responsive. Stack: React, Firebase, JavaScript, Vite, i18next, Redux.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Especialista en Servicios de Soporte</h3>
+                    <span class="company">Tiendanuovo y MatikStore</span>
+                    <span class="date"><i class="far fa-calendar"></i> Enero 2025 - Marzo 2025</span>
+                    <p>Atención al cliente personalizada, gestión de pedidos y seguimiento de envíos. Creación de rótulos, control de stock e inspección de calidad antes del despacho. Coordinación con el equipo para garantizar entregas precisas y satisfacción del cliente.</p>
+                </div>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                    <h3>Operario de Depósito</h3>
+                    <span class="company">Fast Pack</span>
+                    <span class="date"><i class="far fa-calendar"></i> Noviembre 2024 - Enero 2025</span>
+                    <p>Preparación y empaquetado de productos para despacho. Control de inventario y verificación de calidad. Experiencia en entornos con alto volumen de trabajo y enfoque en la eficiencia operativa.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Habilidades -->
+    <section id="habilidades">
+        <h2 class="section-title">Habilidades</h2>
+        <div class="skills-carousel-container">
+            <div class="skills-carousel">
+                <div class="skill-slide">
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fab fa-react"></i>
+                    <span>React Native</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fab fa-js"></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fab fa-js"></i>
+                    <span>TypeScript</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fab fa-node"></i>
+                    <span>Node.js</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
+                </div>
+                <div class="skill-slide">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto">
+        <h2 class="section-title">Contacto</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name"><i class="far fa-user"></i> Nombre</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="far fa-envelope"></i> Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="far fa-comment-dots"></i> Mensaje</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">
+                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
+                </button>
+            </form>
+            <div class="social-links">
+                <a href="https://github.com/juanisouza" target="_blank" class="social-link" title="GitHub">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://linkedin.com/in/juan-ignacio-souza-4736a51b0" target="_blank" class="social-link" title="LinkedIn">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="/cdn-cgi/l/email-protection#10646550757d71797c3e737f7d" class="social-link" title="Email">
+                    <i class="far fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Mi Portfolio. Todos los derechos reservados.</p>
+    </footer>
+
+    <script type="text/javascript" 
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    
+    <script src="script.js"></script>
+</body>
+</html>
