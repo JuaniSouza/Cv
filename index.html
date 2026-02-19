@@ -3,22 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mi Portfolio</title>
+    <title>Juan Souza | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Fira+Code:wght@300;400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <!-- Matrix Rain Canvas -->
+    <canvas id="matrix-rain"></canvas>
+
+    <!-- CRT Overlay -->
+    <div class="crt-overlay"></div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">Portfolio</div>
+            <div class="logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">JS</span>
+                <span class="logo-bracket">]</span>
+                <span class="logo-cursor">_</span>
+            </div>
             <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Sobre Mí</a></li>
-                <li><a href="#proyectos">Proyectos</a></li>
-                <li><a href="#experiencias">Experiencias</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="#inicio"><span class="nav-prefix">01.</span>inicio</a></li>
+                <li><a href="#sobre-mi"><span class="nav-prefix">02.</span>sobre_mi</a></li>
+                <li><a href="#proyectos"><span class="nav-prefix">03.</span>proyectos</a></li>
+                <li><a href="#experiencias"><span class="nav-prefix">04.</span>experiencia</a></li>
+                <li><a href="#educacion"><span class="nav-prefix">05.</span>educacion</a></li>
+                <li><a href="#habilidades"><span class="nav-prefix">06.</span>skills</a></li>
+                <li><a href="#contacto"><span class="nav-prefix">07.</span>contacto</a></li>
             </ul>
             <div class="menu-toggle">
                 <span></span>
@@ -31,115 +44,218 @@
     <!-- Hero Section -->
     <section id="inicio" class="hero">
         <div class="hero-content">
-            <div class="hero-profile-image">
-                <div class="profile-photo">
-                    <img src="foto-perfil.jpeg" alt="Foto de Juan Souza">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">juan@portfolio:~</span>
+                </div>
+                <div class="terminal-body">
+                    <div class="hero-profile-image">
+                        <div class="profile-photo">
+                            <img src="images/foto-perfil.jpeg" alt="Foto de Juan Souza">
+                            <div class="profile-scanline"></div>
+                        </div>
+                    </div>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">whoami</span></p>
+                    <h1 class="glitch" data-text="Juan Souza">Juan Souza</h1>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat role.txt</span></p>
+                    <p class="hero-role"><span class="typing-text">Full Stack Developer | Web & Mobile</span><span class="cursor-blink">▊</span></p>
+                    <p class="terminal-line"><span class="prompt">$</span> <span class="cmd">cat about.txt</span></p>
+                    <p class="hero-subtitle">> Desarrollador web y mobile con orientación al detalle y pasión por crear experiencias digitales excepcionales</p>
+                    <div class="hero-buttons">
+                        <a href="cvjuansouza.pdf" download class="hero-btn">
+                            <i class="fas fa-download"></i> download_cv.pdf
+                        </a>
+                        <a href="https://github.com/juanisouza" target="_blank" class="hero-btn hero-btn-secondary">
+                            <i class="fab fa-github"></i> github
+                        </a>
+                        <a href="https://linkedin.com/in/juan-ignacio-souza-4736a51b0" target="_blank" class="hero-btn hero-btn-secondary">
+                            <i class="fab fa-linkedin"></i> linkedin
+                        </a>
+                    </div>
                 </div>
             </div>
-            <h1>Hola, soy Juan Souza</h1>
-            <p>Full Stack Developer | Web & Mobile</p>
-            <p class="hero-subtitle">Desarrollador web y mobile con orientación al detalle y pasión por crear experiencias digitales excepcionales</p>
-            <div class="hero-buttons">
-                <a href="cvjuansouza.pdf" download class="hero-btn">
-                    <i class="fas fa-download"></i> Descargar CV
-                </a>
-                <a href="https://github.com/juanisouza" target="_blank" class="hero-btn hero-btn-secondary">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a href="https://linkedin.com/in/juan-ignacio-souza-4736a51b0" target="_blank" class="hero-btn hero-btn-secondary">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-            </div>
         </div>
-        <div class="scroll-indicator"></div>
+        <div class="scroll-indicator">
+            <span class="scroll-text">scroll_down</span>
+            <div class="scroll-arrow"></div>
+        </div>
     </section>
 
     <!-- Sobre Mí -->
     <section id="sobre-mi">
-        <h2 class="section-title">Sobre Mí</h2>
+        <h2 class="section-title"><span class="section-num">02 //</span> Sobre Mí</h2>
         <div class="about-content">
-            <div class="about-text-full">
-                <h3>¡Encantado de conocerte!</h3>
-                <p>Tengo 23 años y soy un desarrollador web y mobile con orientación al detalle, capacidad de adaptación y gran interés por el aprendizaje continuo.</p>
-                <p>A lo largo de mi trayectoria, he adquirido conocimientos en HTML, CSS, JavaScript, Tailwind y frameworks como React y React Native con Expo. Para servidor y backend utilizo Node.js. Con todas estas tecnologías he llevado a cabo proyectos completos desde el diseño hasta su implementación. Esto incluye 2 páginas de minijuegos en internet y 2 juegos mobile.</p>
-                <p>Me considero una persona organizada, proactiva, responsable y con buenas habilidades interpersonales. Busco formar parte de un equipo donde pueda aplicar mis conocimientos en desarrollo full stack y siempre estoy en búsqueda de nuevas oportunidades para crecer profesional y personalmente.</p>
-                <p>Me encanta aprender, compartir conocimiento y asumir retos que me permitan seguir evolucionando como profesional en tecnología.</p>
+            <div class="terminal-window about-terminal">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">about.md</span>
+                </div>
+                <div class="terminal-body">
+                    <p class="about-line"><span class="comment">// Datos personales</span></p>
+                    <p class="about-line"><span class="keyword">const</span> <span class="variable">edad</span> = <span class="number">23</span>;</p>
+                    <p class="about-line"><span class="keyword">const</span> <span class="variable">ubicacion</span> = <span class="string">"Buenos Aires, Argentina"</span>;</p>
+                    <p class="about-line"><span class="keyword">const</span> <span class="variable">studio</span> = <span class="string">"Jings Studio"</span>;</p>
+                    <br>
+                    <p class="about-line"><span class="comment">// Resumen</span></p>
+                    <p class="about-text">Soy un desarrollador web y mobile con orientación al detalle, capacidad de adaptación y gran interés por el aprendizaje continuo.</p>
+                    <br>
+                    <p class="about-text">A lo largo de mi trayectoria, he adquirido conocimientos en HTML, CSS, JavaScript, Tailwind y frameworks como React y React Native con Expo. Para servidor y backend utilizo Node.js. Con todas estas tecnologías he llevado a cabo proyectos completos desde el diseño hasta su implementación. Esto incluye plataformas web de minijuegos, juegos mobile publicados en Play Store y App Store, y aplicaciones multiplataforma.</p>
+                    <br>
+                    <p class="about-text">Me considero una persona organizada, proactiva, responsable y con buenas habilidades interpersonales. Busco formar parte de un equipo donde pueda aplicar mis conocimientos en desarrollo full stack y siempre estoy en búsqueda de nuevas oportunidades para crecer profesional y personalmente.</p>
+                    <br>
+                    <p class="about-line"><span class="keyword">const</span> <span class="variable">passion</span> = <span class="string">"Aprender, compartir conocimiento y asumir retos"</span>;</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Proyectos -->
     <section id="proyectos">
-        <h2 class="section-title">Proyectos</h2>
+        <h2 class="section-title"><span class="section-num">03 //</span> Proyectos</h2>
         <div class="projects-grid">
+
+            <!-- Impostor! -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="typerush.png" alt="">
+                    <img src="images/imposter-icon.png" alt="Impostor!">
                 </div>
                 <div class="project-content">
-                    <h3>TypeRush</h3>
-                    <p>Juego móvil multiplataforma para mejorar velocidad y precisión de escritura. Sistema de combos de 10 niveles, dificultad adaptativa, multiidioma (ES/EN/PT) y monetización con AdMob. Incluye tracking de WPM, precisión y sistema de récords.</p>
+                    <div class="project-header">
+                        <h3>Impostor!</h3>
+                        <span class="project-status live">● LIVE</span>
+                    </div>
+                    <p>Juego de deducción social multijugador para 3-10 jugadores. Sistema de privacidad en 3 capas, +15 categorías de palabras, configuración avanzada (cantidad de impostores, modo caos) y soporte para 6 idiomas. Disponible en Play Store y App Store.</p>
                     <div class="project-tags">
                         <span class="tag">React Native</span>
                         <span class="tag">TypeScript</span>
                         <span class="tag">Expo</span>
                         <span class="tag">i18n</span>
+                        <span class="tag">EAS Build</span>
                     </div>
                     <div class="project-buttons">
-                        <a href="https://play.google.com/store/apps/details?id=tu.app" target="_blank" class="project-btn">
-                            <i class="fas fa-external-link-alt"></i> Play Store
+                        <a href="https://play.google.com/store/apps/details?id=com.jingsstudios.impostorgame&hl=es_AR" target="_blank" class="project-btn">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
-                        <a href="https://github.com/tu-usuario/typerush" target="_blank" class="project-btn project-btn-secondary">
-                            <i class="fab fa-github"></i> Código
+                        <a href="https://apps.apple.com/ar/app/imposter-juego-de-palabras/id6758682609" target="_blank" class="project-btn">
+                            <i class="fab fa-apple"></i> App Store
                         </a>
                     </div>
                 </div>
             </div>
 
+            <!-- Impostor Argento -->
             <div class="project-card">
                 <div class="project-image">
-                    <img src="lolchallenge.png" alt="">
+                    <img src="images/argento-icon.png" alt="Impostor Argento">
                 </div>
                 <div class="project-content">
-                    <h3>LoL Challenge</h3>
-                    <p>Plataforma web de 9 mini-juegos interactivos de League of Legends con audiencia global. Sistema de autenticación, rankings globales, progresión con divisiones, multilenguaje (ES/EN) y analytics. Optimizado para móvil, tablet y desktop.</p>
+                    <div class="project-header">
+                        <h3>Impostor Argento</h3>
+                        <span class="project-status live">● LIVE</span>
+                    </div>
+                    <p>Variante localizada para el mercado argentino con +600 palabras en 12 categorías culturales (Lunfardo, Comidas, Fútbol, Lugares, Músicos, etc.). Sistema de privacidad en 3 capas con identidad visual propia. Disponible en Play Store y App Store.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">AsyncStorage</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://apps.apple.com/ar/app/impostor-argento/id6758686011" target="_blank" class="project-btn">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TypeRush -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/typerush.png" alt="TypeRush">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>TypeRush</h3>
+                        <span class="project-status live">● LIVE</span>
+                    </div>
+                    <p>Juego móvil multiplataforma para mejorar velocidad y precisión de escritura. Sistema de combos de 10 niveles, dificultad adaptativa, +100 frases categorizadas, multiidioma (ES/EN/PT), audio dinámico y monetización con AdMob.</p>
+                    <div class="project-tags">
+                        <span class="tag">React Native</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Expo</span>
+                        <span class="tag">AdMob</span>
+                        <span class="tag">i18n</span>
+                    </div>
+                    <div class="project-buttons">
+                        <a href="https://play.google.com/store/apps/details?id=com.jingsstudio.typerush&hl=es_AR" target="_blank" class="project-btn">
+                            <i class="fab fa-google-play"></i> Play Store
+                        </a>
+                        <a href="https://apps.apple.com/ar/app/typerush-speed-typing-game/id6758802093" target="_blank" class="project-btn">
+                            <i class="fab fa-apple"></i> App Store
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LoL Challenge -->
+            <div class="project-card">
+                <div class="project-image">
+                    <img src="images/lolchallenge.png" alt="LoL Challenge">
+                </div>
+                <div class="project-content">
+                    <div class="project-header">
+                        <h3>LoL Challenge</h3>
+                        <span class="project-status live">● LIVE</span>
+                    </div>
+                    <p>Plataforma web con 9 mini-juegos de League of Legends con audiencia global. Auth con Firebase, rankings globales, sistema de progresión con divisiones, multilenguaje (ES/EN), analytics y optimización SEO.</p>
                     <div class="project-tags">
                         <span class="tag">React</span>
                         <span class="tag">Firebase</span>
                         <span class="tag">JavaScript</span>
+                        <span class="tag">Redux</span>
                         <span class="tag">i18next</span>
                     </div>
                     <div class="project-buttons">
                         <a href="https://lolchallenge.net" target="_blank" class="project-btn">
                             <i class="fas fa-external-link-alt"></i> Ver Sitio
                         </a>
-                        <a href="https://github.com/tu-usuario/lolchallenge" target="_blank" class="project-btn project-btn-secondary">
-                            <i class="fab fa-github"></i> Código
-                        </a>
+
                     </div>
                 </div>
             </div>
 
+            <!-- Color Fusion -->
             <div class="project-card">
                 <div class="project-image">
-                    <i class="fas fa-palette"></i>
+                    <img src="images/colorfusion-icon.png" alt="Color Fusion">
                 </div>
                 <div class="project-content">
-                    <h3>Color Fusion</h3>
-                    <p>Juego de puzzle móvil con mecánicas innovadoras y diseño UI responsivo. Sistema de puntuación avanzado, efectos visuales y experiencia de usuario optimizada para dispositivos móviles.</p>
+                    <div class="project-header">
+                        <h3>Color Fusion</h3>
+                        <span class="project-status completed">● COMPLETED</span>
+                    </div>
+                    <p>Puzzle móvil con mecánicas de fusión de colores tipo Tetris en grid 4x4. Monetización freemium con RevenueCat, misiones diarias, power-ups estratégicos y cross-promotion con TypeRush.</p>
                     <div class="project-tags">
                         <span class="tag">React Native</span>
-                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
                         <span class="tag">Expo</span>
-                        <span class="tag">Mobile</span>
+                        <span class="tag">RevenueCat</span>
+                        <span class="tag">Reanimated</span>
                     </div>
                     <div class="project-buttons">
-                        <a href="https://play.google.com/store" target="_blank" class="project-btn">
-                            <i class="fas fa-external-link-alt"></i> Ver Proyecto
+                        <a href="https://play.google.com/store/apps/details?id=com.jingsstudio.colorfusion&hl=es_AR" target="_blank" class="project-btn">
+                            <i class="fab fa-google-play"></i> Play Store
                         </a>
-                        <a href="https://github.com/tu-usuario/color-fusion" target="_blank" class="project-btn project-btn-secondary">
-                            <i class="fab fa-github"></i> Código
-                        </a>
+
                     </div>
                 </div>
             </div>
@@ -148,25 +264,17 @@
 
     <!-- Experiencias -->
     <section id="experiencias">
-        <h2 class="section-title">Experiencias</h2>
+        <h2 class="section-title"><span class="section-num">04 //</span> Experiencia</h2>
         <div class="timeline">
-            <div class="timeline-item">
-                <div class="timeline-dot"></div>
-                <div class="timeline-content">
-                    <h3>Full Stack Developer | Creator</h3>
-                    <span class="company">Jings Studio - TypeRush</span>
-                    <span class="date"><i class="far fa-calendar"></i> Agosto 2025 - Actualidad</span>
-                    <p>Desarrollo de TypeRush, juego móvil multiplataforma con sistema de combos de 10 niveles, motor de dificultad adaptativa, base de datos con más de 100 frases categorizadas y sistema multiidioma (ES/EN/PT). Implementación de monetización no intrusiva con AdMob, tracking de métricas (WPM, precisión, récords) y efectos visuales avanzados. Stack: React Native, TypeScript, Expo Router, AdMob SDK, i18n-js.</p>
-                </div>
-            </div>
 
             <div class="timeline-item">
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
+                    <div class="timeline-tag">ACTUAL</div>
                     <h3>Full Stack Developer | Creator</h3>
-                    <span class="company">LoL Challenge</span>
+                    <span class="company"><i class="fas fa-building"></i> Jings Studio</span>
                     <span class="date"><i class="far fa-calendar"></i> Enero 2025 - Actualidad</span>
-                    <p>Desarrollo full stack de plataforma web con 9 mini-juegos interactivos de League of Legends. Implementación de sistema de autenticación con Firebase Auth, rankings globales con Firestore, sistema de progresión con divisiones, arquitectura multilenguaje y optimización SEO. Integración de Google Analytics 4 y diseño responsive. Stack: React, Firebase, JavaScript, Vite, i18next, Redux.</p>
+                    <p>Desarrollo y publicación de múltiples aplicaciones mobile y web bajo el sello Jings Studio. Proyectos incluyen: Impostor!, Impostor Argento, TypeRush, LoL Challenge y Color Fusion. Stack principal: React Native, TypeScript, Expo, Firebase, AdMob, RevenueCat. Apps publicadas en Google Play Store y Apple App Store.</p>
                 </div>
             </div>
 
@@ -174,9 +282,9 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <h3>Especialista en Servicios de Soporte</h3>
-                    <span class="company">Tiendanuovo y MatikStore</span>
+                    <span class="company"><i class="fas fa-building"></i> Tiendanuovo y MatikStore</span>
                     <span class="date"><i class="far fa-calendar"></i> Enero 2025 - Marzo 2025</span>
-                    <p>Atención al cliente personalizada, gestión de pedidos y seguimiento de envíos. Creación de rótulos, control de stock e inspección de calidad antes del despacho. Coordinación con el equipo para garantizar entregas precisas y satisfacción del cliente.</p>
+                    <p>Atención al cliente personalizada, gestión de pedidos y seguimiento de envíos. Creación de rótulos, control de stock e inspección de calidad. Coordinación con el equipo para garantizar entregas precisas y satisfacción del cliente.</p>
                 </div>
             </div>
 
@@ -184,7 +292,7 @@
                 <div class="timeline-dot"></div>
                 <div class="timeline-content">
                     <h3>Operario de Depósito</h3>
-                    <span class="company">Fast Pack</span>
+                    <span class="company"><i class="fas fa-building"></i> Fast Pack</span>
                     <span class="date"><i class="far fa-calendar"></i> Noviembre 2024 - Enero 2025</span>
                     <p>Preparación y empaquetado de productos para despacho. Control de inventario y verificación de calidad. Experiencia en entornos con alto volumen de trabajo y enfoque en la eficiencia operativa.</p>
                 </div>
@@ -192,46 +300,96 @@
         </div>
     </section>
 
+    <!-- Educación -->
+    <section id="educacion">
+        <h2 class="section-title"><span class="section-num">05 //</span> Educación & Certificaciones</h2>
+        <div class="education-grid">
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fas fa-graduation-cap"></i></div>
+                <div class="edu-content">
+                    <h3>Certified Tech Developer</h3>
+                    <span class="edu-institution">Digital House</span>
+                    <span class="edu-detail">Desarrollo de aplicaciones web</span>
+                    <span class="edu-date">Oct 2022 - Jun 2024</span>
+                    <p>Trabajo final: "Dilo con disfraces" – Sitio web de alquiler de disfraces responsive. Stack: Java Springboot, Maven, Spring Security, React.js, MySQL. Infraestructura: EC2 AWS. Certificación con respaldo de Mercado Libre y Globant.</p>
+                </div>
+            </div>
+            <div class="edu-card">
+                <div class="edu-icon"><i class="fas fa-school"></i></div>
+                <div class="edu-content">
+                    <h3>Bachillerato</h3>
+                    <span class="edu-institution">Instituto Cardoso</span>
+                    <span class="edu-date">2014 - 2020</span>
+                </div>
+            </div>
+            <div class="edu-card cert-card">
+                <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                <div class="edu-content">
+                    <h3>Introducción a Redes</h3>
+                    <span class="edu-institution">EducacionIT</span>
+                    <span class="edu-date">Dic 2025</span>
+                    <span class="edu-detail">ID: 109946482152</span>
+                </div>
+            </div>
+            <div class="edu-card cert-card">
+                <div class="edu-icon"><i class="fas fa-certificate"></i></div>
+                <div class="edu-content">
+                    <h3>Reparador de PC</h3>
+                    <span class="edu-institution">EducacionIT</span>
+                    <span class="edu-date">Dic 2025</span>
+                    <span class="edu-detail">ID: 109946482144</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Habilidades -->
     <section id="habilidades">
-        <h2 class="section-title">Habilidades</h2>
-        <div class="skills-carousel-container">
-            <div class="skills-carousel">
-                <div class="skill-slide">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
+        <h2 class="section-title"><span class="section-num">06 //</span> Skills</h2>
+        <div class="skills-terminal">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">skills --list-all</span>
                 </div>
-                <div class="skill-slide">
-                    <i class="fab fa-react"></i>
-                    <span>React Native</span>
-                </div>
-                <div class="skill-slide">
-                    <i class="fab fa-js"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-slide">
-                    <i class="fab fa-js"></i>
-                    <span>TypeScript</span>
-                </div>
-                <div class="skill-slide">
-                    <i class="fab fa-node"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill-slide">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-slide">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="skill-slide">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
-                </div>
-                <div class="skill-slide">
-                    <i class="fas fa-database"></i>
-                    <span>SQL</span>
+                <div class="terminal-body">
+                    <p class="skills-category-line"><span class="prompt">$</span> <span class="cmd">ls ./habilidades_duras</span></p>
+                    <div class="skills-chips">
+                        <div class="skill-chip"><i class="fab fa-react"></i> React</div>
+                        <div class="skill-chip"><i class="fab fa-react"></i> React Native</div>
+                        <div class="skill-chip"><i class="fab fa-html5"></i> HTML / CSS</div>
+                        <div class="skill-chip"><i class="fab fa-js"></i> JavaScript</div>
+                        <div class="skill-chip"><i class="fas fa-database"></i> SQL</div>
+                        <div class="skill-chip"><i class="fas fa-paper-plane"></i> Postman</div>
+                        <div class="skill-chip"><i class="fab fa-git-alt"></i> GIT</div>
+                        <div class="skill-chip"><i class="fab fa-java"></i> Java</div>
+                        <div class="skill-chip"><i class="fas fa-mobile-alt"></i> Expo</div>
+                        <div class="skill-chip"><i class="fab fa-node"></i> Node.js</div>
+                        <div class="skill-chip"><i class="fab fa-aws"></i> AWS Cloud</div>
+                        <div class="skill-chip"><i class="fab fa-docker"></i> Docker</div>
+                        <div class="skill-chip"><i class="fab fa-js"></i> TypeScript</div>
+                        <div class="skill-chip"><i class="fas fa-fire"></i> Firebase</div>
+                        <div class="skill-chip"><i class="fas fa-globe"></i> i18n</div>
+                        <div class="skill-chip"><i class="fas fa-ad"></i> AdMob SDK</div>
+                        <div class="skill-chip"><i class="fas fa-credit-card"></i> RevenueCat</div>
+                        <div class="skill-chip"><i class="fas fa-bolt"></i> Vite</div>
+                        <div class="skill-chip"><i class="fas fa-wind"></i> Tailwind</div>
+                        <div class="skill-chip"><i class="fas fa-leaf"></i> Spring Boot</div>
+                    </div>
+
+                    <p class="skills-category-line"><span class="prompt">$</span> <span class="cmd">ls ./habilidades_blandas</span></p>
+                    <div class="skills-chips">
+                        <div class="skill-chip soft"><i class="fas fa-users"></i> Trabajo en equipo</div>
+                        <div class="skill-chip soft"><i class="fas fa-rocket"></i> Proactividad</div>
+                        <div class="skill-chip soft"><i class="fas fa-sync-alt"></i> Adaptabilidad</div>
+                        <div class="skill-chip soft"><i class="fas fa-tasks"></i> Scrum</div>
+                        <div class="skill-chip soft"><i class="fas fa-car"></i> Licencia de conducir B1</div>
+                        <div class="skill-chip soft"><i class="fas fa-hashtag"></i> Gestión de redes sociales</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -239,48 +397,60 @@
 
     <!-- Contacto -->
     <section id="contacto">
-        <h2 class="section-title">Contacto</h2>
+        <h2 class="section-title"><span class="section-num">07 //</span> Contacto</h2>
         <div class="contact-container">
-            <form class="contact-form">
-                <div class="form-group">
-                    <label for="name"><i class="far fa-user"></i> Nombre</label>
-                    <input type="text" id="name" name="name" required>
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <span class="terminal-title">send_message.sh</span>
                 </div>
-                <div class="form-group">
-                    <label for="email"><i class="far fa-envelope"></i> Email</label>
-                    <input type="email" id="email" name="email" required>
+                <div class="terminal-body">
+                    <p class="terminal-line contact-intro"><span class="prompt">$</span> <span class="cmd">echo "¿Tenés un proyecto en mente? ¡Hablemos!"</span></p>
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name"><span class="prompt">></span> nombre:</label>
+                            <input type="text" id="name" name="name" placeholder="tu_nombre" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email"><span class="prompt">></span> email:</label>
+                            <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message"><span class="prompt">></span> mensaje:</label>
+                            <textarea id="message" name="message" placeholder="Escribí tu mensaje..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">
+                            <i class="fas fa-terminal"></i> ejecutar enviar_mensaje()
+                        </button>
+                    </form>
+                    <div class="social-links">
+                        <a href="https://github.com/juanisouza" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/juan-ignacio-souza-4736a51b0" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:juansouzacomercial@gmail.com" class="social-link" title="Email">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="message"><i class="far fa-comment-dots"></i> Mensaje</label>
-                    <textarea id="message" name="message" required></textarea>
-                </div>
-                <button type="submit" class="submit-btn">
-                    <i class="fas fa-paper-plane"></i> Enviar Mensaje
-                </button>
-            </form>
-            <div class="social-links">
-                <a href="https://github.com/juanisouza" target="_blank" class="social-link" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://linkedin.com/in/juan-ignacio-souza-4736a51b0" target="_blank" class="social-link" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="/cdn-cgi/l/email-protection#10646550757d71797c3e737f7d" class="social-link" title="Email">
-                    <i class="far fa-envelope"></i>
-                </a>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 Mi Portfolio. Todos los derechos reservados.</p>
+        <div class="footer-content">
+            <p class="footer-text"><span class="prompt">$</span> echo "© 2025 Juan Souza | Todos los derechos reservados"</p>
+        </div>
     </footer>
 
-    <script type="text/javascript" 
-            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
-    </script>
-    
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
